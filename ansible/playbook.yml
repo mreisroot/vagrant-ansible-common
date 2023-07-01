@@ -1,0 +1,7 @@
+---
+- name: Aplicar a configuração common na máquina de destino
+  hosts: default
+  become: true
+  roles:
+    - common
+...

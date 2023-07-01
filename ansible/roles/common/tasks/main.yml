@@ -1,0 +1,15 @@
+---
+- name: Atualizar o cache do apt
+  apt:
+    update_cache: true
+
+- name: Instalar pacotes
+  apt:
+    name: [vim, curl, telnet, unzip, wget, net-tools, htop, nmap]
+    state: "present"
+
+- name: Definir o nome da máquina
+  hostname:
+    name: "common"
+    use: "systemd"
+...
